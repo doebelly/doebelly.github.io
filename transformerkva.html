@@ -1,0 +1,21 @@
+<html>
+  <head>
+        <title>Add program</title>
+        <script language="javascript">
+                function addNumbers()
+                {
+                        var val1 = parseInt(document.getElementById("ENTER KVA").value);
+                        var val2 = parseInt(document.getElementById("ENTER VOLTAGE").value);
+                        var ansD = document.getElementById("answer");
+                        ansD.value = (val1 * 1000) / val2;
+                }
+        </script>
+  </head>
+  <body>
+        ENTER KVA = <input type="text" id="ENTER KVA" name="ENTER KVA" value=""/>
+        ENTER VOLTAGE = <input type="text" id="ENTER VOLTAGE" name="ENTER VOLTAGE" value=""/>
+        <input type="button" name="Sumbit" value="Click here" onclick="javascript:addNumbers()"/>
+        AMPS = <input type="text" id="answer" name="answer" value=""/>
+  </body>
+</html>
+
