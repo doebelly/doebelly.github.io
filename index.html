@@ -1,31 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to Doe' Site</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
+<html manifest="parts_list.appcache" lang="en">
+    <head>
+        <title>Parts List</title>
+        <meta name='viewport' content='initial-scale=1, width=device-width'>
+        <link rel="icon" href="img/appicon.png" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="128x128" href="img/appicon.png" />
+        <link rel="apple-touch-icon-precomosed" sizes="128x128" href="img/appicon.png" />
+        <link rel="apple-touch-startup-image" href="img/appicon.png" />
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='all'>
+        <script src="js/jquery.js"></script>
+        <script src="js/fuse.js"></script>
+        <script src="js/jquery.mark.js"></script>
+        <script src="js/search.js"></script>
+    </head>
 <body>
-<h1>Welcome to the Doe!</h1>
-<p>If you see this page, then you are at the doe site.</p>
 
-<p>Doe's Links</P> 
-<a href="transformerkva.html">kva calulator</a>.<br/>
+<div id="container">
 
-<a href="http://google.com/">google.com</a>.</p>
+<h1>Parts List</h1>
 
-
-
-
-
-
-
-
-<p><em>Thank you for using Doe.</em></p>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div class="my-auto" >
+    <form action="../parts_list/">
+      <input id="search-query" name="s"/>
+    </form>
+  </div>
+  </section>
+  <table id="search-results">
+      <tr><td><b>BAAN</b></td><td><b>SAP</b></td><td><b>MATERIAL DESCRIPTION</b></td><td><b>PURCHASE ORDER TEXT</b></td></tr>
+  <script id="search-result-template" type="text/x-js-template">
+      <tr><td>${BAAN}</td><td>${SAP}</td><td>${MATERIAL_DESCRIPTION}</td><td>${PURCHASE_ORDER_TEXT}</td></tr>
+  </script>
+  </table>
 </body>
 </html>
+
